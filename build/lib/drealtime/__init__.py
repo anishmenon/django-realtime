@@ -1,6 +1,10 @@
-import httplib
 import socket
 from django.conf import settings
+
+try:
+    import httplib
+except:
+    import http.client as  httplib
 
 try:
     from django.utils import simplejson as json
