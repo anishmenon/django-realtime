@@ -8,7 +8,7 @@ except:
 
 try:
     from django.utils import simplejson as json
-except:
+except ImportError:
     import simplejson as json
 
 __version__ = '0.1.5'
