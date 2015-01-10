@@ -1,9 +1,12 @@
 import httplib
 import socket
 from django.conf import settings
-from django.utils import simplejson as json
+try:
+    from django.utils import simplejson as json
+except ImportError:
+    import json
 
-__version__ = '0.1.5'
+__version__ = '0.1.6'
 VERSION = map(int, __version__.split('.'))
 
 class iShoutClient(object):
