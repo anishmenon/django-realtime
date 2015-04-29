@@ -8,9 +8,13 @@ except:
 
 try:
     from django.utils import simplejson as json
+
 except ImportError:
     import simplejson as json
-
+    
+except:
+    import json
+    
 __version__ = '0.1.5'
 VERSION = map(int, __version__.split('.'))
 
