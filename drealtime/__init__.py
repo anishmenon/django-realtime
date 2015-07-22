@@ -1,4 +1,9 @@
-import httplib
+try:
+    # Python 2
+    import httplib
+except ImportError:
+    # Python 3
+    import http.client as httplib
 import socket
 from django.conf import settings
 try:
